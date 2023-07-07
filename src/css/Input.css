@@ -1,0 +1,47 @@
+form {
+  grid-row: 3;
+  display: flex;
+  justify-content: space-between;
+  max-width: 860px;
+  margin: 0 auto 40px;
+  padding: 20px;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #8a2be2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+button:hover {
+  background-color: #6a1fbd;
+}
+
+.emoji-picker {
+  position: fixed;
+  top: 45%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .emoji-picker {
+    top: 40%;
+  }
+}

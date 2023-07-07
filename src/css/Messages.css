@@ -1,0 +1,156 @@
+.Messages-container {
+  padding: 0;
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  list-style: none;
+  grid-row: 2;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Dark-mode-button {
+  position: absolute;
+  top: 10px;
+  right: 100px;
+}
+
+.Logout-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.Message-date {
+  text-align: center;
+  padding-top: 10px;
+  color: #999;
+}
+
+.Messages-list {
+  overflow: auto;
+  max-height: calc(85vh - 200px);
+}
+
+.Messages-message {
+  display: flex;
+  margin-top: 10px;
+}
+
+.Messages-message.currentMember {
+  /*justify-content: flex-end;*/
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.Message-content {
+  display: inline-block;
+}
+
+.currentMember > .Message-content {
+  align-items: flex-end;
+}
+
+.Messages-message > .avatar {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  margin: 0 10px -10px;
+  color: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Message-content > .username {
+  display: block;
+  color: gray;
+  font-size: 14px;
+  padding-bottom: 4px;
+}
+
+.Message-content > .text {
+  padding: 10px;
+  max-width: 400px;
+  margin: 0;
+  border-radius: 12px;
+  background-color: cornflowerblue;
+  color: white;
+  display: inline-block;
+  font-family: "Architects Daughter", cursive;
+}
+
+.currentMember > .Message-content .text {
+  background-color: orangered;
+}
+
+.timestamp {
+  font-size: 12px;
+  color: #999;
+  margin-top: 4px;
+}
+
+.Typing-indicator {
+  padding: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-style: italic;
+  color: gray;
+  animation: 2s pulse infinite ease-out;
+}
+
+.Typing-indicator::before,
+.Typing-indicator::after {
+  content: "";
+  position: absolute;
+  bottom: -11px;
+  left: -11px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: rgba(247, 247, 247, 0);
+}
+.Typing-indicator::after {
+  height: 10px;
+  width: 10px;
+  left: -17px;
+  bottom: -17px;
+}
+
+.Typing-indicator span {
+  height: 10px;
+  width: 10px;
+  float: left;
+  margin: 0 1px;
+  background-color: #9e9ea1;
+  display: block;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+
+.Typing-indicator span:nth-child(1) {
+  animation: 1s blink infinite 0.3333s;
+}
+
+.Typing-indicator span:nth-child(2) {
+  animation: 1s blink infinite 0.6666s;
+}
+
+.Typing-indicator span:nth-child(3) {
+  animation: 1s blink infinite 0.9999s;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.05);
+  }
+}
